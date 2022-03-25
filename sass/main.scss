@@ -1,0 +1,18 @@
+//basic-settings
+@import 'base/basic-settings';
+@import 'base/body';
+@import 'base/container';
+@import 'base/section';
+@import 'utils/variable';
+@import 'utils/visually-hidden';
+@import 'components/button';
+@import 'components/icon';
+
+// Header section
+@import 'layouts/header';
+@import 'components/navigation';
+
+// Hero section
+@import 'layouts/hero';
+
+// footer-section

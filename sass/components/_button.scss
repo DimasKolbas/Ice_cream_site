@@ -1,0 +1,90 @@
+.button {
+  position: absolute;
+  background-size: cover;
+  border: transparent;
+  font-family: var(--second-font);
+  font-style: normal;
+  font-weight: 700px;
+  line-height: 1.3em;
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1280px) {
+  }
+
+  &-products {
+    top: 318px;
+    left: 20px;
+    width: 62.4px;
+    height: 24px;
+    border-radius: 20px;
+    font-weight: 400px;
+    font-size: 8px;
+    line-height: 1.25em;
+    color: var(--light-text);
+    background-color: var(--selected-text);
+    z-index: 1;
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 768px) {
+      top: 202px;
+      left: 34px;
+    }
+    @media screen and (min-width: 1280px) {
+      top: 333px;
+      left: 115px;
+      width: 104px;
+      height: 40px;
+      font-size: 14px;
+      line-height: 1.28em;
+    }
+  }
+
+  &-made {
+    top: 318px;
+    left: 90.4px;
+    width: 82.8px;
+    height: 24px;
+    border-radius: 20px;
+    font-weight: 400px;
+    font-size: 8px;
+    line-height: 1.25em;
+    color: var(--selected-text);
+    background-color: var(--light-text);
+    z-index: 1;
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 768px) {
+      top: 202px;
+      left: 104.4px;
+    }
+    @media screen and (min-width: 1280px) {
+      top: 333px;
+      left: 234px;
+      width: 138px;
+      height: 40px;
+      font-size: 14px;
+      line-height: 1.28em;
+    }
+  }
+
+  &-arrow {
+    border-radius: 50%;
+    background-image: url('/images/png/arrow.png');
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 768px) {
+      top: 347px;
+      left: 154px;
+      width: 18px;
+      height: 18px;
+    }
+    @media screen and (min-width: 1280px) {
+      top: 583px;
+      left: 295px;
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
