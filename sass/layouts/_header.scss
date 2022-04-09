@@ -1,0 +1,38 @@
+.header-section {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1280px) {
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1280px) {
+  }
+
+  &__logo {
+    width: 199px;
+    height: 50px;
+    background-image: url('/images/png/logo_desktop.png');
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 37px;
+      margin-left: 0;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-left: 25px;
+    }
+  }
+}

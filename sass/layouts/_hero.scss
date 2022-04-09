@@ -1,20 +1,12 @@
 .hero-section {
-  // width: 100%;
-  // margin: 0 auto;
+  // overflow: hidden;
   background-color: var(--accent-color);
-  @media screen and (min-width: 480px) {
-  }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1280px) {
-  }
 }
 
 .hero {
   position: relative;
   height: 502px;
-  @media screen and (min-width: 480px) {
-  }
+
   @media screen and (min-width: 768px) {
     height: 399px;
   }
@@ -22,7 +14,7 @@
     height: 665px;
   }
 
-  &__title {
+  &__caption {
     position: absolute;
     top: 193px;
     left: 20px;
@@ -33,8 +25,6 @@
     color: var(--light-text);
     text-align: left;
     z-index: 1;
-    @media screen and (min-width: 480px) {
-    }
     @media screen and (min-width: 768px) {
       top: 102px;
       left: 34px;
@@ -49,112 +39,16 @@
     }
   }
 
-  &__title--bigsize {
+  &__title--bold {
     font-size: 48px;
     line-height: 96.5%;
-    color: var(--selected-text);
-    @media screen and (min-width: 480px) {
-    }
+    color: var(--bold-rose);
     @media screen and (min-width: 768px) {
       font-size: 34px;
       line-height: 90.5%;
     }
     @media screen and (min-width: 1280px) {
       font-size: 58px;
-    }
-  }
-
-  &__text {
-    position: absolute;
-    display: none;
-    text-align: left;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-      display: block;
-      top: 292px;
-      left: 154px;
-      font-family: var(--second-font);
-      font-size: 8px;
-      line-height: 150%;
-      color: var(--light-text);
-    }
-    @media screen and (min-width: 1280px) {
-      top: 485px;
-      left: 295px;
-      font-size: 14px;
-      line-height: 140%;
-    }
-  }
-
-  &__ellipse {
-    position: absolute;
-    top: 83px;
-    right: -62px;
-    width: 346px;
-    height: 344px;
-    border-radius: 50%;
-    background-color: #ffa5ba;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-      top: 31px;
-      left: 307px;
-      width: 324px;
-      height: 322px;
-    }
-    @media screen and (min-width: 1280px) {
-      top: 52px;
-      left: 475px;
-      right: 267px;
-      width: 538px;
-      height: 538px;
-    }
-  }
-
-  &__ice-cream {
-    position: absolute;
-    top: 92px;
-    right: 32px;
-    width: 171px;
-    height: 410px;
-    background-image: url('/images/png/ice-cream_mobile.png');
-    background-size: cover;
-    @media screen and (min-width: 480px) {
-    }
-    @media (min-device-pixel-ratio: 2) and (max-width: 767px),
-      (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
-      (min-resolution: 192dpi) and (max-width: 767px),
-      (min-resolution: 2dppx) and (max-width: 767px) {
-      background-image: url('/images/png/ice-cream_mobile@2x.png');
-    }
-
-    @media screen and (min-width: 768px) {
-      background-image: url('/images/png/ice-cream_tablet.png');
-      top: 63px;
-      left: 378px;
-      width: 143px;
-      height: 336px;
-    }
-    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
-      (min-resolution: 192dpi) and (min-width: 768px),
-      (min-resolution: 2dppx) and (min-width: 768px) {
-      background-image: url('/images/png/ice-cream_tablet@2x.png');
-    }
-
-    @media screen and (min-width: 1280px) {
-      background-image: url('/images/png/ice-cream_desktop.png');
-      top: 108px;
-      left: 594px;
-      width: 236px;
-      height: 557px;
-    }
-    @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (min-resolution: 192dpi) and (min-width: 1280px),
-      (min-resolution: 2dppx) and (min-width: 1280px) {
-      background-image: url('/images/png/ice-cream_desktop@2x.png');
     }
   }
 
@@ -190,22 +84,137 @@
     }
   }
 
-  &__number--16 {
+  &__text {
     position: absolute;
+    display: none;
+    text-align: left;
     @media screen and (min-width: 480px) {
     }
+    @media screen and (min-width: 768px) {
+      display: block;
+      top: 292px;
+      left: 154px;
+      font-family: var(--second-font);
+      font-size: 8px;
+      line-height: 150%;
+      color: var(--light-text);
+    }
+    @media screen and (min-width: 1280px) {
+      top: 485px;
+      left: 295px;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    display: none;
+    width: 26px;
+    height: 26px;
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 768px) {
+      display: block;
+      top: 347px;
+      left: 154px;
+      background-image: url('/images/png/hero-arrow_table.png');
+    }
+    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+      (min-resolution: 192dpi) and (min-width: 768px),
+      (min-resolution: 2dppx) and (min-width: 768px) {
+      background-image: url('/images/png/hero-arrow_table@2x.png');
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: 583px;
+      left: 295px;
+      background-image: url('/images/png/hero-arrow_desktop.png');
+    }
+    @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+      (min-resolution: 192dpi) and (min-width: 1280px),
+      (min-resolution: 2dppx) and (min-width: 1280px) {
+      background-image: url('/images/png/hero-arrow_desktop@2x.png');
+    }
+  }
+
+  &__ellipse {
+    position: absolute;
+    top: 83px;
+    right: -62px;
+    width: 346px;
+    height: 344px;
+    border-radius: 50%;
+    background-color: #ffa5ba;
+    @media screen and (min-width: 768px) {
+      top: 31px;
+      left: 307px;
+      width: 324px;
+      height: 322px;
+    }
+    @media screen and (min-width: 1280px) {
+      top: 52px;
+      left: 475px;
+      right: 267px;
+      width: 538px;
+      height: 538px;
+    }
+  }
+
+  &__ice-cream {
+    position: absolute;
+    top: 92px;
+    right: 32px;
+    width: 171px;
+    height: 410px;
+    background-image: url('/images/png/ice-cream_mobile.png');
+    background-size: cover;
+    @media (min-device-pixel-ratio: 2) and (max-width: 767px),
+      (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+      (min-resolution: 192dpi) and (max-width: 767px),
+      (min-resolution: 2dppx) and (max-width: 767px) {
+      background-image: url('/images/png/ice-cream_mobile@2x.png');
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 63px;
+      left: 378px;
+      width: 143px;
+      height: 336px;
+      background-image: url('/images/png/ice-cream_tablet.png');
+    }
+    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+      (min-resolution: 192dpi) and (min-width: 768px),
+      (min-resolution: 2dppx) and (min-width: 768px) {
+      background-image: url('/images/png/ice-cream_tablet@2x.png');
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: 108px;
+      left: 594px;
+      width: 236px;
+      height: 557px;
+      background-image: url('/images/png/ice-cream_desktop.png');
+    }
+    @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+      (min-resolution: 192dpi) and (min-width: 1280px),
+      (min-resolution: 2dppx) and (min-width: 1280px) {
+      background-image: url('/images/png/ice-cream_desktop@2x.png');
+    }
+  }
+
+  &__number--16 {
+    position: absolute;
     @media screen and (min-width: 768px) {
       top: 94px;
       right: 34px;
       width: 43px;
       height: 44px;
       background-image: url('/images/png/16_tablet.png');
-    }
-    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
-      (min-resolution: 192dpi) and (min-width: 768px),
-      (min-resolution: 2dppx) and (min-width: 768px) {
-      background-image: url('/images/png/16_tablet@2x.png');
     }
 
     @media screen and (min-width: 1280px) {
@@ -215,30 +224,16 @@
       height: 77px;
       background-image: url('/images/png/16_desktop.png');
     }
-    @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (min-resolution: 192dpi) and (min-width: 1280px),
-      (min-resolution: 2dppx) and (min-width: 1280px) {
-      background-image: url('/images/png/16_desktop@2x.png');
-    }
   }
 
   &__number--23 {
     position: absolute;
-    @media screen and (min-width: 480px) {
-    }
     @media screen and (min-width: 768px) {
       top: 151px;
       right: 34px;
       width: 51px;
       height: 43px;
       background-image: url('/images/png/23_tablet.png');
-    }
-    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
-      (min-resolution: 192dpi) and (min-width: 768px),
-      (min-resolution: 2dppx) and (min-width: 768px) {
-      background-image: url('/images/png/23_tablet@2x.png');
     }
 
     @media screen and (min-width: 1280px) {
@@ -248,30 +243,16 @@
       height: 76px;
       background-image: url('/images/png/23_desktop.png');
     }
-    @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (min-resolution: 192dpi) and (min-width: 1280px),
-      (min-resolution: 2dppx) and (min-width: 1280px) {
-      background-image: url('/images/png/23_desktop@2x.png');
-    }
   }
 
   &__girl {
     position: absolute;
-    @media screen and (min-width: 480px) {
-    }
     @media screen and (min-width: 768px) {
       top: 266px;
       right: 34px;
       width: 168px;
       height: 133px;
       background-image: url('/images/png/girl_tablet.png');
-    }
-    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
-      (min-resolution: 192dpi) and (min-width: 768px),
-      (min-resolution: 2dppx) and (min-width: 768px) {
-      background-image: url('/images/png/girl_tablet@2x.png');
     }
 
     @media screen and (min-width: 1280px) {
@@ -280,12 +261,6 @@
       width: 293px;
       height: 232px;
       background-image: url('/images/png/girl_desktop.png');
-    }
-    @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (min-resolution: 192dpi) and (min-width: 1280px),
-      (min-resolution: 2dppx) and (min-width: 1280px) {
-      background-image: url('/images/png/girl_desktop@2x.png');
     }
   }
 }

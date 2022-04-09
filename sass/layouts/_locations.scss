@@ -1,0 +1,94 @@
+.location-section {
+    position: relative;
+    height: 775px;
+    background-color: #FFF5F6;
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1280px) {}
+
+    &__background {
+        @media screen and (min-width: 1280px) {
+            position: absolute;
+            top: 0;
+            height: 382px;
+            width: 100%;
+            background-image: url("/images/png/location-background.png");
+            background-size: cover;
+        }
+
+        @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+        (min-resolution: 192dpi) and (min-width: 1280px),
+        (min-resolution: 2dppx) and (min-width: 1280px) {
+            background-image: url('/images/png/location-background@2x.png');
+        }
+    }
+}
+
+.location {
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1280px) {}
+
+    &__caption {
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {}
+
+        @media screen and (min-width: 1280px) {}
+    }
+
+    &__list {
+        position: absolute;
+        top: -84px;
+        left: 50%;
+        transform: translate(-50%);
+        right: auto;
+
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            top: -78px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: -102px;
+        }
+    }
+
+    &__item {
+        padding: 43px 21px;
+        width: 220px;
+        height: 427px;
+        background-color: var(--light-text);
+        border-radius: 24px;
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {
+            padding: 50px 32px;
+            height: 544px;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 51px 44px 62px;
+            width: 330px;
+            height: 572px;
+
+            &:not(:last-child) {
+                margin-right: 31px;
+            }
+        }
+    }
+}

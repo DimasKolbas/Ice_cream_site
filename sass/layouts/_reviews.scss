@@ -1,0 +1,194 @@
+.reviews-section {
+    background-color: var(--light-text);
+    width: 100%;
+}
+
+.review {
+    padding-top: 80px;
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 768px) {
+        padding-top: 121px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 123px;
+    }
+
+    &__people-image {
+        min-width: 85px;
+        margin: 0 auto;
+        margin-bottom: 29px;
+
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 19px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__background {
+        width: 280px;
+        height: 308px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        padding: 18px 38px;
+        background-color: #FAFAFA;
+
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {
+            width: 620px;
+            height: 164px;
+            margin-bottom: 24px;
+            padding: 30px 35px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 926px;
+            height: 138px;
+            margin-bottom: 15px;
+            padding: 32px 52px;
+        }
+    }
+
+    &__image {
+        min-width: 157px;
+        height: 270px;
+        background-image: url("/images/png/group_mobile.png");
+        background-size: cover;
+
+        @media screen and (min-width: 480px) {}
+
+        @media (min-device-pixel-ratio: 2) and (max-width: 767px),
+        (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+        (min-resolution: 192dpi) and (max-width: 767px),
+        (min-resolution: 2dppx) and (max-width: 767px) {
+            background-image: url('/images/png/group_mobile@2x.png');
+        }
+
+        @media screen and (min-width: 768px) {
+            min-width: 544px;
+            height: 106px;
+            background-image: url("/images/png/group_tablet.png");
+        }
+
+        @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+        (min-resolution: 192dpi) and (min-width: 768px),
+        (min-resolution: 2dppx) and (min-width: 768px) {
+            background-image: url('/images/png/group_tablet@2x.png');
+        }
+
+        @media screen and (min-width: 1280px) {
+            min-width: 822px;
+            height: 74px;
+            background-image: url("/images/png/group_desktop.png");
+        }
+
+        @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+        (min-resolution: 192dpi) and (min-width: 1280px),
+        (min-resolution: 2dppx) and (min-width: 1280px) {
+            background-image: url('/images/png/group_desktop@2x.png');
+        }
+    }
+
+    &__points {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 18px;
+
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 14px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        font-family: var(--second-font);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 186%;
+
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 35px;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            font-size: 20px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 170px;
+        width: 72px;
+
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 197px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 234px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 18px;
+        }
+
+        @media screen and (min-width: 480px) {}
+
+        @media screen and (min-width: 768px) {}
+
+        @media screen and (min-width: 1280px) {}
+    }
+
+    &__item-button {
+        position: relative;
+        margin: 0 auto;
+        width: 12px;
+        height: 12px;
+        background-color: #D9D9D9;
+        border: none;
+        border-radius: 50%;
+
+        &:hover,
+        :focus {
+            background-color: transparent;
+        }
+    }
+
+    &__item-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        opacity: 0;
+
+        &:hover,
+        :focus {
+            opacity: 1;
+        }
+    }
+}

@@ -5,5 +5,26 @@
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1280px) {
+    display: flex;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__list-page {
+    color: var(--light-text);
+    font-family: var(--second-font);
+    font-weight: 700;
+    line-height: 1.3em;
   }
 }

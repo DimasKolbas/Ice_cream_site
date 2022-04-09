@@ -7,12 +7,18 @@
 @import 'utils/visually-hidden';
 @import 'components/button';
 @import 'components/icon';
+@import 'components/caption';
 
 // Header section
 @import 'layouts/header';
 @import 'components/navigation';
 
-// Hero section
+// Main sections
 @import 'layouts/hero';
+@import 'layouts/products';
+@import 'layouts/made';
+@import"layouts/collage";
+@import"layouts/reviews";
+@import"layouts/locations";
 
 // footer-section
