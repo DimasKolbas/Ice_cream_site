@@ -1,30 +1,109 @@
 .navigation {
-  display: none;
-  @media screen and (min-width: 480px) {
-  }
-  @media screen and (min-width: 768px) {
-  }
+  display: flex;
+
   @media screen and (min-width: 1280px) {
-    display: flex;
     margin-left: 110px;
-    margin-right: 110px;
   }
 
   &__list {
-    display: flex;
-    margin-top: 50px;
+    display: none;
+
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      margin-top: 50px;
+    }
   }
 
   &__list-item {
     &:not(:last-child) {
       margin-right: 35px;
     }
+
+    &:hover,
+    &:focus {
+      transform: translate(0, -5px) scale(1.1);
+      transition: transform 250ms linear;
+    }
   }
 
   &__list-page {
-    color: var(--light-text);
+    position: relative;
     font-family: var(--second-font);
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.3em;
+    color: var(--light-text);
+
+    &:hover,
+    &:focus {
+      font-size: 18px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--bold-rose);
+      opacity: 0;
+      transition: opacity 2s linear;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+    }
+  }
+
+  &__burger-menu {
+    position: relative;
+    width: 20px;
+    height: 12px;
+    margin-top: 25px;
+    margin-left: 61px;
+    background-color: transparent;
+    border-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 21px;
+      height: 12px;
+      top: 0;
+      left: 2px;
+      background-image: url("/images/png/burger.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-top: 52px;
+      margin-left: 291px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    &:hover {
+      background-color: #ECEBEB;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-top: 38px;
+      margin-left: 30px;
+      width: 160px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-left: 110px;
+    }
   }
 }

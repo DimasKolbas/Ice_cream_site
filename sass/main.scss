@@ -6,8 +6,11 @@
 @import 'utils/variable';
 @import 'utils/visually-hidden';
 @import 'components/button';
-@import 'components/icon';
 @import 'components/caption';
+@import"components/modal-window";
+@import"components/burger";
+@import"components/backdrop";
+@import"components/scroll";
 
 // Header section
 @import 'layouts/header';
@@ -22,3 +25,4 @@
 @import"layouts/locations";
 
 // footer-section
+@import"layouts/footer";

@@ -1,13 +1,6 @@
 .location-section {
     position: relative;
-    height: 775px;
     background-color: #FFF5F6;
-
-    @media screen and (min-width: 480px) {}
-
-    @media screen and (min-width: 768px) {}
-
-    @media screen and (min-width: 1280px) {}
 
     &__background {
         @media screen and (min-width: 1280px) {
@@ -29,18 +22,20 @@
 }
 
 .location {
-    @media screen and (min-width: 480px) {}
+    position: relative;
+    padding-top: 1291px;
+    height: 1502px;
+    font-family: var(--second-font);
+    font-weight: 500;
 
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 768px) {
+        height: 767px;
+        padding-top: 547px;
+    }
 
-    @media screen and (min-width: 1280px) {}
-
-    &__caption {
-        @media screen and (min-width: 480px) {}
-
-        @media screen and (min-width: 768px) {}
-
-        @media screen and (min-width: 1280px) {}
+    @media screen and (min-width: 1280px) {
+        height: 775px;
+        padding-top: 556px;
     }
 
     &__list {
@@ -49,8 +44,6 @@
         left: 50%;
         transform: translate(-50%);
         right: auto;
-
-        @media screen and (min-width: 480px) {}
 
         @media screen and (min-width: 768px) {
             display: flex;
@@ -63,18 +56,35 @@
     }
 
     &__item {
-        padding: 43px 21px;
+        padding: 43px 18px;
         width: 220px;
         height: 427px;
         background-color: var(--light-text);
         border-radius: 24px;
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
+        &:not(:first-child) {
+            margin-bottom: 20px;
+        }
+
+        &:first-child &-type--background,
+        &:last-child &-type--background {
+            background-color: var(--coffee-color);
+        }
+
+        &:nth-child(2) &-type--background {
+            background-color: var(--pistachio-color);
+        }
+
         @media screen and (min-width: 480px) {}
 
         @media screen and (min-width: 768px) {
             padding: 50px 32px;
             height: 544px;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
 
             &:not(:last-child) {
                 margin-right: 20px;
@@ -89,6 +99,165 @@
             &:not(:last-child) {
                 margin-right: 31px;
             }
+        }
+    }
+
+    &__item-type--background {
+        margin: 0 auto;
+        margin-bottom: 25px;
+        padding: 0 16px;
+        width: fit-content;
+        border-radius: 6px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__item-type {
+        font-size: 12px;
+        line-height: 186%;
+        color: var(--light-text);
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &__item-city {
+        margin-bottom: 10px;
+        line-height: 186%;
+        text-align: left;
+        color: var(--accent-text);
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 14px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__item-text {
+        line-height: 1.5em;
+        text-align: left;
+        color: var(--secondary-text);
+
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+            line-height: 166%;
+        }
+
+        @media screen and (min-width: 1280px) {
+            font-size: 16px;
+            line-height: 183%;
+        }
+    }
+
+    &__item-line {
+        margin: 25px auto;
+        border: 1px solid #E1E1E1;
+
+        @media screen and (min-width: 768px) {
+            margin: 30px auto;
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin: 32px auto;
+        }
+    }
+
+    &__schedule-item {
+        margin-bottom: 10px;
+        text-align: left;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 16px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__schedule-days {
+        line-height: 186%;
+        color: var(--accent-text);
+    }
+
+    &__schedule-ours {
+        line-height: 186%;
+        color: var(--light-rose);
+    }
+
+    &__schedule-contacts {
+        text-align: left;
+        line-height: 1.5em;
+        color: var(--secondary-text);
+
+        @media screen and (min-width: 768px) {
+            line-height: 183%;
+        }
+    }
+
+    &__button-section {
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__button-location {
+        width: 162px;
+        margin: 0 auto 10px;
+        background-color: #D41342;
+        color: var(--light-text);
+
+        &::after {
+            content: "";
+            margin-left: 12px;
+            background-image: url("/images/png/arrow-white.png");
+            width: 7px;
+            height: 10px;
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            background-color: #C7133E;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 192px;
+            margin: 0;
+            margin-right: 15px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 198px;
+        }
+    }
+
+    &__button-franchise {
+        width: 161px;
+        margin: 0 auto;
+
+        &:hover {
+            background-color: #ECEBEB;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 174px;
+            margin: 0;
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 180px;
         }
     }
 }

@@ -1,0 +1,20 @@
+.scroll {
+  position: fixed;
+  bottom: 5vh;
+  right: 3vw;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  background-color: var(--rose-color);
+  opacity: 0.5;
+  border-radius: 50%;
+  transition: all 1s linear;
+}
+.scroll__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  fill: var(--bold-rose);
+}/*# sourceMappingURL=.scroll.css.map */

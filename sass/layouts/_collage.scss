@@ -1,23 +1,25 @@
 .collage-section {
     margin-top: -48px;
-
-    // background-color: var(--light-text);
-    @media screen and (min-width: 480px) {}
+    margin-bottom: 154px;
 
     @media screen and (min-width: 768px) {
         margin-top: -106px;
+        margin-bottom: 279px;
     }
 
     @media screen and (min-width: 1280px) {
         margin-top: -171px;
+        margin-bottom: 382px;
     }
 }
 
 .collage {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
     &__image {
         height: 122px;
-
-        @media screen and (min-width: 480px) {}
 
         @media screen and (min-width: 768px) {
             height: 264px;

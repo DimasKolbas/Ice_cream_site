@@ -1,6 +1,7 @@
 .hero-section {
-  // overflow: hidden;
-  background-color: var(--accent-color);
+  background-color: var(--rose-color);
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .hero {
@@ -10,6 +11,7 @@
   @media screen and (min-width: 768px) {
     height: 399px;
   }
+
   @media screen and (min-width: 1280px) {
     height: 665px;
   }
@@ -25,12 +27,14 @@
     color: var(--light-text);
     text-align: left;
     z-index: 1;
+
     @media screen and (min-width: 768px) {
       top: 102px;
       left: 34px;
       font-size: 22px;
       line-height: 1.14em;
     }
+
     @media screen and (min-width: 1280px) {
       top: 171px;
       left: 115px;
@@ -39,14 +43,73 @@
     }
   }
 
+  &__button--red {
+    position: absolute;
+    top: 318px;
+    left: 20px;
+    width: 62.4px;
+    color: var(--light-text);
+    background-color: #D41443;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+      background-color: #C7133E;
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 202px;
+      left: 34px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: 333px;
+      left: 115px;
+      width: 104px;
+      font-size: 14px;
+      line-height: 1.28em;
+    }
+  }
+
+  &__button--white {
+    position: absolute;
+    top: 318px;
+    left: 90.4px;
+    width: 82.8px;
+    font-weight: 400px;
+    font-size: 8px;
+    line-height: 1.25em;
+    border-radius: 20px;
+    z-index: 1;
+
+    &:hover {
+      background-color: #ECEBEB;
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 202px;
+      left: 104.4px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: 333px;
+      left: 234px;
+      width: 138px;
+      font-size: 14px;
+      line-height: 1.28em;
+    }
+  }
+
   &__title--bold {
     font-size: 48px;
     line-height: 96.5%;
     color: var(--bold-rose);
+
     @media screen and (min-width: 768px) {
       font-size: 34px;
       line-height: 90.5%;
     }
+
     @media screen and (min-width: 1280px) {
       font-size: 58px;
     }
@@ -62,10 +125,17 @@
       background-image: url('/images/png/milk-glass_tablet.png');
       background-size: cover;
     }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2) rotate(-45deg);
+      transition: transform 250ms linear;
+    }
+
     @media (min-device-pixel-ratio: 2) and (min-width: 768px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
-      (min-resolution: 192dpi) and (min-width: 768px),
-      (min-resolution: 2dppx) and (min-width: 768px) {
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+    (min-resolution: 192dpi) and (min-width: 768px),
+    (min-resolution: 2dppx) and (min-width: 768px) {
       background-image: url('/images/png/milk-glass_tablet@2x.png');
     }
 
@@ -76,10 +146,11 @@
       width: 188px;
       height: 191px;
     }
+
     @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (min-resolution: 192dpi) and (min-width: 1280px),
-      (min-resolution: 2dppx) and (min-width: 1280px) {
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+    (min-resolution: 192dpi) and (min-width: 1280px),
+    (min-resolution: 2dppx) and (min-width: 1280px) {
       background-image: url('/images/png/milk-glass_desktop@2x.png');
     }
   }
@@ -88,8 +159,7 @@
     position: absolute;
     display: none;
     text-align: left;
-    @media screen and (min-width: 480px) {
-    }
+
     @media screen and (min-width: 768px) {
       display: block;
       top: 292px;
@@ -99,6 +169,7 @@
       line-height: 150%;
       color: var(--light-text);
     }
+
     @media screen and (min-width: 1280px) {
       top: 485px;
       left: 295px;
@@ -112,18 +183,18 @@
     display: none;
     width: 26px;
     height: 26px;
-    @media screen and (min-width: 480px) {
-    }
+
     @media screen and (min-width: 768px) {
       display: block;
       top: 347px;
       left: 154px;
       background-image: url('/images/png/hero-arrow_table.png');
     }
+
     @media (min-device-pixel-ratio: 2) and (min-width: 768px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
-      (min-resolution: 192dpi) and (min-width: 768px),
-      (min-resolution: 2dppx) and (min-width: 768px) {
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+    (min-resolution: 192dpi) and (min-width: 768px),
+    (min-resolution: 2dppx) and (min-width: 768px) {
       background-image: url('/images/png/hero-arrow_table@2x.png');
     }
 
@@ -132,10 +203,11 @@
       left: 295px;
       background-image: url('/images/png/hero-arrow_desktop.png');
     }
+
     @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (min-resolution: 192dpi) and (min-width: 1280px),
-      (min-resolution: 2dppx) and (min-width: 1280px) {
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+    (min-resolution: 192dpi) and (min-width: 1280px),
+    (min-resolution: 2dppx) and (min-width: 1280px) {
       background-image: url('/images/png/hero-arrow_desktop@2x.png');
     }
   }
@@ -148,12 +220,29 @@
     height: 344px;
     border-radius: 50%;
     background-color: #ffa5ba;
+    animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+
+    @keyframes scale-in-center {
+      0% {
+        transform: scale(0.5);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+
+      100% {
+        transform: scale(0.5);
+      }
+    }
+
     @media screen and (min-width: 768px) {
       top: 31px;
       left: 307px;
       width: 324px;
       height: 322px;
     }
+
     @media screen and (min-width: 1280px) {
       top: 52px;
       left: 475px;
@@ -171,10 +260,17 @@
     height: 410px;
     background-image: url('/images/png/ice-cream_mobile.png');
     background-size: cover;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      transition: transform 500ms linear;
+    }
+
     @media (min-device-pixel-ratio: 2) and (max-width: 767px),
-      (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
-      (min-resolution: 192dpi) and (max-width: 767px),
-      (min-resolution: 2dppx) and (max-width: 767px) {
+    (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+    (min-resolution: 192dpi) and (max-width: 767px),
+    (min-resolution: 2dppx) and (max-width: 767px) {
       background-image: url('/images/png/ice-cream_mobile@2x.png');
     }
 
@@ -185,10 +281,11 @@
       height: 336px;
       background-image: url('/images/png/ice-cream_tablet.png');
     }
+
     @media (min-device-pixel-ratio: 2) and (min-width: 768px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
-      (min-resolution: 192dpi) and (min-width: 768px),
-      (min-resolution: 2dppx) and (min-width: 768px) {
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+    (min-resolution: 192dpi) and (min-width: 768px),
+    (min-resolution: 2dppx) and (min-width: 768px) {
       background-image: url('/images/png/ice-cream_tablet@2x.png');
     }
 
@@ -199,16 +296,18 @@
       height: 557px;
       background-image: url('/images/png/ice-cream_desktop.png');
     }
+
     @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
-      (min-resolution: 192dpi) and (min-width: 1280px),
-      (min-resolution: 2dppx) and (min-width: 1280px) {
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+    (min-resolution: 192dpi) and (min-width: 1280px),
+    (min-resolution: 2dppx) and (min-width: 1280px) {
       background-image: url('/images/png/ice-cream_desktop@2x.png');
     }
   }
 
   &__number--16 {
     position: absolute;
+
     @media screen and (min-width: 768px) {
       top: 94px;
       right: 34px;
@@ -228,6 +327,7 @@
 
   &__number--23 {
     position: absolute;
+
     @media screen and (min-width: 768px) {
       top: 151px;
       right: 34px;
@@ -247,6 +347,7 @@
 
   &__girl {
     position: absolute;
+
     @media screen and (min-width: 768px) {
       top: 266px;
       right: 34px;

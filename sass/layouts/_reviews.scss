@@ -6,8 +6,6 @@
 .review {
     padding-top: 80px;
 
-    @media screen and (min-width: 480px) {}
-
     @media screen and (min-width: 768px) {
         padding-top: 121px;
     }
@@ -20,8 +18,6 @@
         min-width: 85px;
         margin: 0 auto;
         margin-bottom: 29px;
-
-        @media screen and (min-width: 480px) {}
 
         @media screen and (min-width: 768px) {
             margin-bottom: 19px;
@@ -39,8 +35,6 @@
         margin-bottom: 30px;
         padding: 18px 38px;
         background-color: #FAFAFA;
-
-        @media screen and (min-width: 480px) {}
 
         @media screen and (min-width: 768px) {
             width: 620px;
@@ -62,8 +56,6 @@
         height: 270px;
         background-image: url("/images/png/group_mobile.png");
         background-size: cover;
-
-        @media screen and (min-width: 480px) {}
 
         @media (min-device-pixel-ratio: 2) and (max-width: 767px),
         (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -104,8 +96,6 @@
         height: 32px;
         margin-bottom: 18px;
 
-        @media screen and (min-width: 480px) {}
-
         @media screen and (min-width: 768px) {
             margin-bottom: 14px;
         }
@@ -121,8 +111,6 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 186%;
-
-        @media screen and (min-width: 480px) {}
 
         @media screen and (min-width: 768px) {
             margin-bottom: 35px;
@@ -140,8 +128,6 @@
         margin-bottom: 170px;
         width: 72px;
 
-        @media screen and (min-width: 480px) {}
-
         @media screen and (min-width: 768px) {
             margin-bottom: 197px;
         }
@@ -155,12 +141,6 @@
         &:not(:last-child) {
             margin-right: 18px;
         }
-
-        @media screen and (min-width: 480px) {}
-
-        @media screen and (min-width: 768px) {}
-
-        @media screen and (min-width: 1280px) {}
     }
 
     &__item-button {

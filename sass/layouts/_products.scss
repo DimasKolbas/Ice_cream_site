@@ -1,11 +1,11 @@
 .products-section {
   margin-bottom: 98px;
   background-color: var(--light-color);
-  @media screen and (min-width: 480px) {
-  }
+
   @media screen and (min-width: 768px) {
     margin-bottom: 112px;
   }
+
   @media screen and (min-width: 1280px) {
     margin-bottom: 119px;
   }
@@ -13,32 +13,23 @@
 
 .products {
   padding-top: 121px;
-  @media screen and (min-width: 480px) {
-  }
+
   @media screen and (min-width: 768px) {
     padding-top: 122px;
   }
+
   @media screen and (min-width: 1280px) {
     padding-top: 127px;
   }
 
-  &__photo {
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1280px) {
-    }
-  }
-
   &__list {
     margin-top: 31px;
-    @media screen and (min-width: 480px) {
-    }
+
     @media screen and (min-width: 768px) {
       display: flex;
       margin-top: 39px;
     }
+
     @media screen and (min-width: 1280px) {
       margin-top: 49px;
     }
@@ -48,21 +39,37 @@
     position: relative;
     margin: 0 auto;
     padding-top: 113px;
-    outline: 2px solid tomato;
+
     &:not(:last-child) {
       margin-bottom: 17px;
     }
+
+    &:first-child .products__list-container {
+      background-color: var(--rose-color);
+    }
+
+    &:nth-child(2) .products__list-container {
+      background-color: var(--coffee-color);
+    }
+
+    &:last-child .products__list-container {
+      background-color: var(--pistachio-color);
+    }
+
     @media screen and (min-width: 480px) {
       width: 280px;
     }
+
     @media screen and (min-width: 768px) {
       width: 217px;
       padding-top: 0;
+
       &:not(:last-child) {
         margin-bottom: 0;
         margin-right: 24px;
       }
     }
+
     @media screen and (min-width: 1280px) {
       width: 335px;
     }
@@ -75,35 +82,28 @@
     transform: translate(-50%, 0);
     min-width: 249px;
     height: 252px;
-    // background-size: contain;
-    // top: -230px;
-    @media screen and (min-width: 480px) {
+
+    &:hover,
+    &:focus {
+      transform: translate(-50%, 0) scale(1.2);
+      transition: transform 300ms linear;
     }
+
     @media screen and (min-width: 768px) {
-      // width: 220px;
-      // height: 226px;
       min-width: 100%;
       height: auto;
-    }
-    @media screen and (min-width: 1280px) {
-      // min-width: 335px;
-      // height: 335px;
-      // top: -210px;
-      // margin-bottom: 38px;
     }
   }
 
   &__list-container {
     padding-top: 161px;
-    // margin-top: 113px;
     border-radius: 24px;
-    outline: 2px solid tomato;
-    @media screen and (min-width: 480px) {
-    }
+
     @media screen and (min-width: 768px) {
       margin-top: 104px;
       padding-top: 152px;
     }
+
     @media screen and (min-width: 1280px) {
       margin-top: 210px;
       padding-top: 163px;
@@ -118,14 +118,8 @@
     line-height: 1.15em;
     text-transform: uppercase;
     color: var(--light-text);
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-      // margin-top: 152px;
-    }
+
     @media screen and (min-width: 1280px) {
-      // margin-top: 163px;
-      // margin-bottom: 70px;
       margin-bottom: 25px;
       font-size: 30px;
       line-height: 1.13em;
@@ -136,10 +130,7 @@
     width: 26px;
     height: 26px;
     margin-bottom: 10px;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
+
     @media screen and (min-width: 1280px) {
       margin-bottom: 15px;
     }
@@ -153,13 +144,13 @@
     font-size: 14px;
     line-height: 152%;
     color: var(--light-text);
-    @media screen and (min-width: 480px) {
-    }
+
     @media screen and (min-width: 768px) {
       margin-bottom: 40px;
       padding: 0 11px;
       line-height: 176%;
     }
+
     @media screen and (min-width: 1280px) {
       margin-bottom: 62px;
       padding: 0 44px;
@@ -172,23 +163,13 @@
     width: 40px;
     height: 40px;
     background-image: url('/images/png/product-arrow.png');
-    @media screen and (min-width: 480px) {
-    }
+
     @media screen and (min-width: 768px) {
       margin-bottom: 40px;
     }
+
     @media screen and (min-width: 1280px) {
       margin-bottom: 50px;
     }
-  }
-
-  &__container--color1 {
-    background-color: var(--accent-color);
-  }
-  &__container--color2 {
-    background-color: var(--second-color);
-  }
-  &__container--color3 {
-    background-color: var(--third-color);
   }
 }

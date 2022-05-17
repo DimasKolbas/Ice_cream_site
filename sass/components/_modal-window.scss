@@ -1,0 +1,241 @@
+// Модальное окно
+.modal-section {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    margin: 20px auto 0;
+    width: 290px;
+    height: 609px;
+    padding: 40px 20px;
+    background: var(--light-rose);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+
+    @media screen and (min-width: 480px) {
+        height: 609px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 60px auto 0;
+        padding: 40px;
+        width: 450px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin: 100px auto 0;
+        width: 528px;
+    }
+
+    &.is-up {
+        opacity: 1;
+        visibility: visible;
+
+        animation: swirl-in-fwd 1s ease-out both;
+
+        @keyframes swirl-in-fwd {
+            0% {
+                transform: translate(-50%, 0) scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(-50%, 0) scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__button-close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+
+        &:hover {
+            fill: var(--bold-rose);
+        }
+
+        @media screen and (min-width: 480px) {
+            margin: 0;
+        }
+    }
+
+    &__close-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 18px;
+        height: 18px;
+        color: #000000;
+    }
+
+    // Заголовок модального окна
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5em;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--accent-text);
+
+        @media screen and (min-width: 1280px) {
+            line-height: 1.15em;
+        }
+    }
+}
+
+// Форма модального окна
+.modal {
+    margin-top: 12px;
+
+    &__list {
+        list-style: none;
+        text-align: left;
+    }
+
+    &__list-item {
+        margin-bottom: 10px;
+    }
+
+    //Заголовок секций формы
+    &__subtitle {
+        margin-bottom: 4px;
+        font-size: 12px;
+        line-height: 1.16em;
+        letter-spacing: 0.01em;
+        color: var(--secondary-text);
+    }
+
+    //Секция списка формы
+    &__label {
+        position: relative;
+    }
+
+    //Строка ввода значений в форму
+    &__input {
+        font-family: var(--second-font);
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0 40px;
+        font-size: 12px;
+        line-height: 1.16em;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:not(:placeholder-shown) {
+            background-color: var(--rose-color);
+            color: var(--bold-rose);
+            border-color: var(--bold-rose);
+        }
+
+        &:hover,
+        :focus {
+            border-color: var(--bold-rose);
+            outline: none;
+        }
+    }
+
+    &__input-textarea {
+        padding: 12px 16px;
+        height: 120px;
+        resize: none;
+    }
+
+    //Иконка секции списка
+    &__icon {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -40%);
+        left: 12px;
+        width: 18px;
+        height: 18px;
+
+        &:hover,
+        :focus {
+            fill: var(--bold-rose);
+        }
+    }
+
+    &__button {
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 0 15px;
+        font-weight: 600;
+
+        &:hover,
+        :focus {
+            background-color: #ECEBEB;
+        }
+    }
+}
+
+//Соглашение и подпись
+.signature {
+    margin-bottom: 30px;
+
+    &__checkbox {
+        &:checked+.signature {
+            color: tomato;
+            opacity: 1;
+        }
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 438px;
+        //     left: 5px;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-image: url("/images/png/checkbox-unchecked.png");
+        //     background-repeat: no-repeat;
+        //     // opacity: 0;
+        // }
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 438px;
+        //     left: 25px;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-image: url("/images/png/checkbox-checked.png");
+        //     background-repeat: no-repeat;
+        //     // opacity: 0;
+        // }
+    }
+
+    &__agreement {
+        position: relative;
+        margin-left: 5px;
+        font-size: 12px;
+        line-height: 1.17em;
+        letter-spacing: 0.03em;
+        color: var(--secondary-text);
+
+        @media screen and (min-width: 1280px) {
+            font-size: 14px;
+            line-height: 1.71em;
+        }
+    }
+
+    &__contract {
+        text-decoration-line: underline;
+        color: var(--bold-rose);
+    }
+}

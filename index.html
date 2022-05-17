@@ -23,35 +23,68 @@
     <header class="header-section">
       <div class="header section">
         <div class="header__logo">
-          <a href="/index.html"></a>
+          <picture>
+            <source srcset="/images/png/logo.png 1x, /images/png/logo@2x.png 2x" media="(max-width: 767px), (min-width: 768px), (min-width: 1280px)">
+            <img src="/images/png/logo.png" alt="ice-cream">
+          </picture>
         </div>
-
+        
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__list-item link">
-              <a href="/index.html" class="navigation__list-page link">Home</a>
+              <a href="#home" class="navigation__list-page link">Home</a>
             </li>
 
             <li class="navigation__list-item link">
-              <a href="#" class="navigation__list-page link">About us</a>
+              <a href="#about" class="navigation__list-page link">About us</a>
             </li>
 
             <li class="navigation__list-item link">
-              <a href="#" class="navigation__list-page link">How it’s made?</a>
+              <a href="#made" class="navigation__list-page link">How it’s made?</a>
             </li>
 
             <li class="navigation__list-item link">
-              <a href="#" class="navigation__list-page link">Our products</a>
+              <a href="#products" class="navigation__list-page link">Our products</a>
             </li>
 
             <li class="navigation__list-item link">
-              <a href="#" class="navigation__list-page link">Contact</a>
+              <a href="#contacts" class="navigation__list-page link">Contact</a>
             </li>
           </ul>
+          
+          <button class="navigation__burger-menu" type="button" data-burger-open></button>
+          <button class="navigation__button pressbutton-arrow" type="button">Buy now</button>
         </nav>
 
-        <button class="button__burger-menu"></button>
-        <button class="button button__buy" type="button">Buy now</button>
+        <div class="burger" data-burger>
+          <button class="burger__icon" type="button" data-burger-close>
+            <svg class="burger__icon--close">
+              <use href="/images/svg/symbol-defs.svg#icon-burger-close"></use>
+            </svg>
+          </button>
+          <button class="burger__button pressbutton-arrow" type="button">Buy now</button>
+          <ul class="burger__list">
+            <li class="burger__list-item link">
+              <a href="#home" class="burger__list-page link">Home</a>
+            </li>
+
+            <li class="burger__list-item link">
+              <a href="#about" class="burger__list-page link">About us</a>
+            </li>
+
+            <li class="burger__list-item link">
+              <a href="#made" class="burger__list-page link">How it’s made?</a>
+            </li>
+
+            <li class="burger__list-item link">
+              <a href="#products" class="burger__list-page link">Our products</a>
+            </li>
+
+            <li class="burger__list-item link">
+              <a href="#contacts" class="burger__list-page link">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -60,13 +93,17 @@
     <main>
       <!-- *HERO SECTION* -->
       <section class="hero-section">
-        <div class="hero section">
+        <div class="hero section" id="home">
           <h1 class="hero__caption">ice cream <br>made with<br><span class="hero__title--bold">passion</span></h1>
-          <button class="button button__products" type="button">Products</button>
-          <button class="button button__made" type="button">How it’s made?</button>
+          <a href="#products">
+            <button class="hero__button--red pressbutton" type="button">Products</button>
+          </a>
+          <a href="#made">
+            <button class="hero__button--white pressbutton" type="button">How it’s made?</button>
+          </a>
           <div class="hero__milk-glass"></div>
           <p class="hero__text">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit,<br>sed do eiusmod tempor<br>incididunt ut labore et</p>
-          <button class="hero__button button__arrow" type="button"></button>
+          <button class="hero__button arrow" type="button"></button>
           <div class="hero__ellipse"></div>
           <div class="hero__ice-cream"></div>
           <div class="hero__number--16"></div>
@@ -77,7 +114,7 @@
 
       <!-- *PRODUCTS SECTION* -->
       <section class="products-section">
-        <div class="products container">
+        <div class="products container" id="products">
           <h2 class="caption">100% natural<span class="caption--bold">products</span></h2>
           <div class="products__photo"></div>
           <ul class="products__list link">
@@ -97,13 +134,13 @@
 
                 <img class="products__list-photo" src="/images/png/products1_mobile.png" alt="ice-cream">
               </picture>
-              <div class="products__list-container products__container--color1">
+              <div class="products__list-container">
                 <h3 class="products__list-title">ice cream</h3>
                   <svg class="products__icon">
                     <use href="/images/svg/symbol-defs.svg#icon-white-points"></use>
                   </svg>
                 <p class="products__list-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
-                <button class="products__button button__arrow" type="button"></button>
+                <button class="products__button arrow" type="button"></button>
               </div>
             </li>
 
@@ -123,13 +160,13 @@
 
                 <img class="products__list-photo" src="/images/png/products2_mobile.png" alt="ice-cream">
               </picture>
-              <div class="products__list-container products__container--color2">
+              <div class="products__list-container">
                 <h3 class="products__list-title">ice coffee</h3>
                 <svg class="products__icon">
                   <use href="/images/svg/symbol-defs.svg#icon-white-points"></use>
                 </svg>
                 <p class="products__list-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
-                <button class="products__button button__arrow" type="button"></button>
+                <button class="products__button arrow" type="button"></button>
               </div>
             </li>
 
@@ -151,13 +188,13 @@
                 <img class="products__list-photo" src="/images/png/products3_mobile.png" alt="ice-cream">
               </picture>
               </div>
-              <div class="products__list-container products__container--color3">
+              <div class="products__list-container">
                 <h3 class="products__list-title">milkshakes</h3>
                 <svg class="products__icon">
                   <use href="/images/svg/symbol-defs.svg#icon-white-points"></use>
                 </svg>
                 <p class="products__list-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
-                <button class="products__button button__arrow" type="button"></button>
+                <button class="products__button arrow" type="button"></button>
               </div>
             </li>
           </ul>
@@ -167,7 +204,7 @@
       <!-- *MADE SECTION* -->
       <section class="made-section">
         <div class="made__background"></div>
-        <div class="made container">
+        <div class="made container" id="made">
           <h2 class="made__caption caption">tradition and love<br><span class="caption--bold">how it’s made?</span></h2>
             <picture>
               <source srcset="/images/webp/milk-and-cow_desktop.webp" media="(min-width: 1280px)"  
@@ -186,7 +223,7 @@
             </picture>
           <p class="made__text--bold">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.</p>
           <p class="made__text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt. <span class="made__text--paragraph">Aliquam erat volutpat. Aenean accumsan.</span></p>
-          <button class="button button__read">Read more</button>
+          <button class="made__button pressbutton-arrow" type="button">Read more</button>
           <ul class="made__list link">
             <li class="made__list-item">
               <img class="made__list-icon" src="/images/png/icon1.png" min-width="33" height="50" alt="ice-cream icon">
@@ -276,13 +313,16 @@
       <!-- *LOCATIONS SECTION* -->
       <section class="location-section">
         <div class="location-section__background"></div>
-        <div class="location container">
+        <div class="location container" id="about">
           <h2 class="visually-hidden">Our location</h2>
           <ul class="location__list link">
             <li class="location__item">
-              <h3 class="location__item-type">CAFE</h3>
+              <div class="location__item-type--background">
+                <h3 class="location__item-type">CAFE</h3>
+              </div>
               <p class="location__item-city">Chicago</p>
               <p class="location__item-text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <div class="location__item-line"></div>
               <ul class="location__schedule-list link">
                 <li class="location__schedule-item">
                   <p class="location__schedule-days">Monday - Friday</p>
@@ -293,13 +333,17 @@
                   <p class="location__schedule-ours">08:00 AM - 16:00 PM</p>
                 </li>
               </ul>
+              <div class="location__item-line"></div>
               <p class="location__schedule-contacts">+61(0) 383 766 284 noreply@envato.com</p>
             </li>
 
             <li class="location__item">
-              <h3 class="location__item-type">FOOD TRUCK</h3>
+              <div class="location__item-type--background">
+                <h3 class="location__item-type">FOOD TRUCK</h3>
+              </div>
               <p class="location__item-city">Los Angeles</p>
               <p class="location__item-text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <div class="location__item-line"></div>
               <ul class="location__schedule-list link">
                 <li class="location__schedule-item">
                   <p class="location__schedule-days">Monday - Friday</p>
@@ -310,13 +354,17 @@
                   <p class="location__schedule-ours">08:00 AM - 16:00 PM</p>
                 </li>
               </ul>
+              <div class="location__item-line"></div>
               <p class="location__schedule-contacts">+61(0) 383 766 284 noreply@envato.com</p>
             </li>
 
             <li class="location__item">
-              <h3 class="location__item-type">CAFE</h3>
+              <div class="location__item-type--background">
+                <h3 class="location__item-type">CAFE</h3>
+              </div>
               <p class="location__item-city">New York</p>
               <p class="location__item-text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <div class="location__item-line"></div>
               <ul class="location__schedule-list link">
                 <li class="location__schedule-item">
                   <p class="location__schedule-days">Monday - Friday</p>
@@ -327,24 +375,129 @@
                   <p class="location__schedule-ours">08:00 AM - 16:00 PM</p>
                 </li>
               </ul>
+              <div class="location__item-line"></div>
               <p class="location__schedule-contacts">+61(0) 383 766 284 noreply@envato.com</p>
             </li>
           </ul>
+          <div class="location__button-section">
+            <button class="location__button-location pressbutton-arrow" type="button">Our Locations</button>
+            <button class="location__button-franchise pressbutton-arrow" type="button">Franchise</button>
+          </div>
         </div>
       </section>
+    </main>
 
     <!-- *FOOTER SECTION* -->
-    <!-- <footer class="footer">
-      <p>homemade ice cream made <span>passion</span></p>
-      <p>Feel free to contact <span>+61 (0) 383 766 284</span></p>
-    </footer> -->
+    <footer class="footer-section">
+      <div class="footer container" id="contacts">
+        <div class="footer__flex-container">
+          <p class="footer__caption">homemade ice cream made <span class="footer__caption--bold">with passion</span></p>
+          <div>
+            <ul class="footer__list link">
+              <li class="footer__list-item">
+                  <svg class="footer__list-icon"><use href="/images/svg/symbol-defs.svg#icon-github"></use></svg>
+              </li>
 
-    <!-- *MODAL WINDOW*
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal-section">
+              <li class="footer__list-item">
+                  <svg class="footer__list-icon"><use href="/images/svg/symbol-defs.svg#icon-telegram"></use></svg>
+              </li>
+
+              <li class="footer__list-item">
+                  <svg class="footer__list-icon"><use href="/images/svg/symbol-defs.svg#icon-facebook"></use></svg>
+              </li>
+            </ul>
+            <p class="footer__contacts">Feel free to contact <span class="footer__contacts--red">+61 (0) 383 766 284</span></p>
+          </div>
+        </div>
+        <div class="footer__line"></div>
+        <p class="footer__copyright">© 2019 - IceCream. All Rights Reserved.</p>
       </div>
+    </footer>
+
+    <!-- *SCROLL* -->
+    <div>
+      <a class="scroll" href="#home">
+        <svg class="scroll__icon">
+        <use href="/images/svg/symbol-defs.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
     </div>
 
-    <script src="./js/modalWindow.js"></script> -->
+    <!-- *MODAL WINDOW* -->
+    <div class="backdrop is-hidden"></div>
+
+    <!-- <div class="modal__backdrop is-hidden" data-modal> -->
+    <div class="modal-section">
+      <button class="modal-section__button-close" type="button" data-modal-close>
+        <svg class="modal-section__close-icon">
+          <use href="./images/svg/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+      <b class="modal-section__title">Оставьте свои данные, мы вам перезвоним</b>
+
+      <form class="modal">
+        <ul class="modal__list">
+          <li class="modal__list-item">
+            <p class="modal__subtitle">Имя</p>
+            <label class="modal__label">
+              <input class="modal__input" type="text" placeholder="Ваше имя" />
+              <svg class="modal__icon">
+                <use href="./images/svg/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </label>
+          </li>
+
+          <li class="modal__list-item">
+            <p class="modal__subtitle">Телефон</p>
+            <label class="modal__label">
+              <input class="modal__input" type="tel" placeholder="+38 (xxx) xxx-xx-xx" />
+              <svg class="modal__icon">
+                <use href="./images/svg/symbol-defs.svg#icon-phone"></use>
+              </svg>
+            </label>
+          </li>
+
+          <li class="modal__list-item">
+            <p class="modal__subtitle">Почта</p>
+            <label class="modal__label">
+              <input class="modal__input" type="email" placeholder="xxxxxxx@gmail.com" />
+              <svg class="modal__icon">
+                <use href="./images/svg/symbol-defs.svg#icon-email" ></use>
+              </svg>
+            </label>
+          </li>
+
+          <li class="modal__list-item">
+            <p class="modal__subtitle">Комментарий</p>
+            <label class="modal__label">
+              <textarea
+                class="modal__input modal__input-textarea"
+                type="text"
+                placeholder="Введите текст"
+              ></textarea>
+            </label>
+          </li>
+        </ul>
+      </form>
+
+      <div class="signature">
+        <input class="signature__checkbox" type="checkbox" name="checkbox" id="checkbox" checked />
+        <label class="signature__label" for="checkbox">
+          <!-- <svg class="signature__icon">
+            <use href="./images/svg/symbol-defs.svg#icon-rectangle"></use>
+          </svg>
+          <svg class="signature__icon--check">
+            <use href="./images/svg/symbol-defs.svg#icon-checkmark"></use>
+          </svg> -->
+          <span class="signature__agreement">Соглашаюсь с рассылкой и принимаю
+            <a href="#" class="signature__contract">Условия договора</a></span>
+        </label>
+      </div>
+      <button class="modal__button pressbutton" type="submit">Отправить</button>
+    </div>
+    <!-- </div> -->
+
+    <script src="/js/modalWindow.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>
